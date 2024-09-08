@@ -182,17 +182,19 @@ public class Testing {
 
         //Before printing our answers I will attempt to get an answer for the mixed array
         @SuppressWarnings("rawtypes")
+        boolean error = false;
         Comparable mixedAnswer = null;
         try{
             mixedAnswer = ArrayFuncs.t4GetMax(mixedArray);
         } catch (Exception e) { //of course this will always fail
             System.out.println("\t\033[0;31mException caught while getting mixed error: " + e.getMessage() + "\033[0m");
+            error = true;
         }
 
         System.out.println("\tTask 4 Answer:" + "\n\t\tString Array: " + stringAnswer + "\n\t\tMixed Array: " + mixedAnswer);
 
         //This will be the successfulness of our test (this one will always fail)
-        return mixedAnswer != null;
+        return !error;
     }
 
     public static boolean task5() { Random rand = new Random(); return task5(rand.nextLong()); }
@@ -234,7 +236,7 @@ public class Testing {
     public static boolean task6(long seed){
         Character[] characterArray = randomArray(
                 seed,
-                (Random rand) -> (char)rand.nextInt('a','z'),
+                (Random rand) -> (char)rand.nextInt('a','z'+1),
                 Character.class
         );
 

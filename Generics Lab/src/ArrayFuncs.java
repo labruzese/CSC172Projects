@@ -1,8 +1,6 @@
 import java.util.function.Function;
 
-/**
- * @author Skylar Abruzese
- */
+/**@author Skylar Abruzese*/
 public final class ArrayFuncs {
 
     //Task 1

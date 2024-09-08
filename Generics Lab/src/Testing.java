@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.function.Function;
 
+/**@author Skylar Abruzese*/
 public class Testing {
 
     public static boolean task1() { Random rand = new Random(); return task1(rand.nextLong()); }
